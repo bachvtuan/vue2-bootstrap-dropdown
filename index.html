@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        vue2 bootstrap dropdown
+        
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+</head>
+
+<body>
+    <div class="container">
+        <div id="app">
+            <br/>
+            <div class="row">
+                <div class="col-xs-6 col-md-6">
+                    <mydropdown ref="theDropdown"   >
+                        <div slot="button" >
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" v-on:click="$refs.theDropdown.toogle()" >
+                            show me <span class="caret"></span>
+                            </button>
+                        </div>
+                        <ul slot="body" class="dropdown-menu">
+                            <li >
+                            <a v-on:click="hello" ><i class="fas fa-times"></i> Hello</a>
+                            </li>
+                            <li><a><i class="far fa-copy" ></i> Copy link</a></li>
+                        </ul>
+                    </mydropdown>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                        <mydropdown ref="theDropdown2"   >
+                            <div slot="button" >
+                                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" v-on:click="$refs.theDropdown2.toogle()" >
+                                show me <span class="caret"></span>
+                                </button>
+                            </div>
+                            <ul slot="body" class="dropdown-menu">
+                                <li >
+                                <a><i class="fas fa-times"></i> Hello</a>
+                                </li>
+                                <li><a><i class="far fa-copy" ></i> Copy link</a></li>
+                            </ul>
+                        </mydropdown>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./dist/example.js"></script>
+</body>
+
+</html>
