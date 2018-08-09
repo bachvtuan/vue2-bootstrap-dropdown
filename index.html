@@ -23,28 +23,62 @@
                             </button>
                         </div>
                         <ul slot="body" class="dropdown-menu">
-                            <li >
-                            <a v-on:click="hello" ><i class="fas fa-times"></i> Hello</a>
-                            </li>
-                            <li><a><i class="far fa-copy" ></i> Copy link</a></li>
+                            <li><a v-on:click="hello" >Hello</a></li>
+                            <li><a>World</a></li>
                         </ul>
                     </mydropdown>
                 </div>
                 <div class="col-xs-6 col-md-6">
+                    <div class="pull-right">
                         <mydropdown ref="theDropdown2"   >
-                            <div slot="button" >
+                            <div slot="button"  >
                                 <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" v-on:click="$refs.theDropdown2.toogle()" >
-                                show me <span class="caret"></span>
+                                right <span class="caret"></span>
                                 </button>
                             </div>
-                            <ul slot="body" class="dropdown-menu">
-                                <li >
-                                <a><i class="fas fa-times"></i> Hello</a>
-                                </li>
-                                <li><a><i class="far fa-copy" ></i> Copy link</a></li>
+                            <ul slot="body" class="dropdown-menu dropdown-menu-right" >
+                                <li><a>Hello</a></li>
+                                <li><a>Micheal</a></li>
                             </ul>
                         </mydropdown>
+                    </div>
                 </div>
+                <div class="col-xs-6 col-md-6">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <div class="dropup">
+                        <mydropdown ref="theDropdown3"  >
+                            <div slot="button"  >
+                                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" v-on:click="$refs.theDropdown3.toogle()" >
+                                Drop up <span class="caret"></span>
+                                </button>
+                            </div>
+                            <ul slot="body" class="dropdown-menu" >
+                                <li><a>Hello</a></li>
+                                <li><a>Micheal</a></li>
+                            </ul>
+                        </mydropdown>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <mydropdown ref="theDropdown4"  >
+                            <div slot="button"  >
+                                <p class="dropdown-toggle" data-toggle="dropdown" v-on:click="$refs.theDropdown4.toogle()"><span class="caret" ></span> no button</p>
+                            </div>
+                            <ul slot="body" class="dropdown-menu" >
+                                <li><a>Hello</a></li>
+                                <li><a>Micheal</a></li>
+                            </ul>
+                        </mydropdown>
+                    </div>
             </div>
         </div>
     </div>
@@ -52,3 +86,4 @@
 </body>
 
 </html>
+
