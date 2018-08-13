@@ -14,12 +14,11 @@ Require the component (globally or in another component)
 components: {
     'mydropdown': require('vue2-bootstrap-dropdown')
 },
-
+```
 or 
 
 ```
 import mydropdown from 'vue2-bootstrap-dropdown'
-...
 components: {
     'mydropdown'
 },
